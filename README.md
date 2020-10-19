@@ -1,4 +1,4 @@
-# Rossity\PhpQuickbase
+# rossity\php-quickbase
 A PHP library for the [Quick Base JSON REST API](https://developer.quickbase.com/) utilizing the OpenAPI definitions.
 
 ## Requirements
@@ -16,7 +16,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/Rossity/PhpQuickbase.git"
+      "url": "https://github.com/rossity/php-quickbase.git"
     }
   ],
   "require": {
