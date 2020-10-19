@@ -20,7 +20,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "Rossity/PhpQuickbase": "*@dev"
+    "Rossity/PhpQuickbase": "^0.1"
   }
 }
 ```
