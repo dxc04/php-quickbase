@@ -1,18 +1,19 @@
 # Rossity\PhpQuickbase\RecordsApi
 
-All URIs are relative to *https://api.quickbase.com/v1*
+All URIs are relative to https://api.quickbase.com/v1.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteRecords**](RecordsApi.md#deleteRecords) | **DELETE** /records | Delete record(s)
-[**runQuery**](RecordsApi.md#runQuery) | **POST** /records/query | Query for data
-[**upsert**](RecordsApi.md#upsert) | **POST** /records | Insert/Update record(s)
+[**deleteRecords()**](RecordsApi.md#deleteRecords) | **DELETE** /records | Delete record(s)
+[**runQuery()**](RecordsApi.md#runQuery) | **POST** /records/query | Query for data
+[**upsert()**](RecordsApi.md#upsert) | **POST** /records | Insert/Update record(s)
 
 
+## `deleteRecords()`
 
-## deleteRecords
-
-> map[string,object] deleteRecords($qBRealmHostname, $authorization, $userAgent, $generated)
+```php
+deleteRecords($qBRealmHostname, $authorization, $userAgent, $generated): map[string,object]
+```
 
 Delete record(s)
 
@@ -25,6 +26,7 @@ Deletes record(s) in a table based on a query. Alternatively, all records in the
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new Rossity\PhpQuickbase\Api\RecordsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -33,7 +35,7 @@ $apiInstance = new Rossity\PhpQuickbase\Api\RecordsApi(
 $qBRealmHostname = 'qBRealmHostname_example'; // string | Your Quick Base domain, for example demo.quickbase.com
 $authorization = 'authorization_example'; // string | The Quick Base authentication scheme you are using to authenticate the request, as described on the [authorization page](../auth).
 $userAgent = 'userAgent_example'; // string | This is entered by the person or utility invoking the API. You might custom create this or use the default one of your toolkit. Being descriptive here may offer more identification and troubleshooting capabilities.
-$generated = new \Rossity\PhpQuickbase\Model\InlineObject12(); // \Rossity\PhpQuickbase\Model\InlineObject12 | 
+$generated = new \Rossity\PhpQuickbase\Model\InlineObject12(); // \Rossity\PhpQuickbase\Model\InlineObject12
 
 try {
     $result = $apiInstance->deleteRecords($qBRealmHostname, $authorization, $userAgent, $generated);
@@ -41,11 +43,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RecordsApi->deleteRecords: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -65,16 +65,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `runQuery()`
 
-## runQuery
-
-> map[string,object] runQuery($qBRealmHostname, $authorization, $userAgent, $generated)
+```php
+runQuery($qBRealmHostname, $authorization, $userAgent, $generated): map[string,object]
+```
 
 Query for data
 
@@ -87,6 +88,7 @@ Pass in a query in the [Quick Base query language](https://help.quickbase.com/ap
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new Rossity\PhpQuickbase\Api\RecordsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -95,7 +97,7 @@ $apiInstance = new Rossity\PhpQuickbase\Api\RecordsApi(
 $qBRealmHostname = 'qBRealmHostname_example'; // string | Your Quick Base domain, for example demo.quickbase.com
 $authorization = 'authorization_example'; // string | The Quick Base authentication scheme you are using to authenticate the request, as described on the [authorization page](../auth).
 $userAgent = 'userAgent_example'; // string | This is entered by the person or utility invoking the API. You might custom create this or use the default one of your toolkit. Being descriptive here may offer more identification and troubleshooting capabilities.
-$generated = new \Rossity\PhpQuickbase\Model\InlineObject13(); // \Rossity\PhpQuickbase\Model\InlineObject13 | 
+$generated = new \Rossity\PhpQuickbase\Model\InlineObject13(); // \Rossity\PhpQuickbase\Model\InlineObject13
 
 try {
     $result = $apiInstance->runQuery($qBRealmHostname, $authorization, $userAgent, $generated);
@@ -103,11 +105,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RecordsApi->runQuery: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -127,16 +127,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `upsert()`
 
-## upsert
-
-> map[string,object] upsert($qBRealmHostname, $authorization, $userAgent, $generated)
+```php
+upsert($qBRealmHostname, $authorization, $userAgent, $generated): map[string,object]
+```
 
 Insert/Update record(s)
 
@@ -149,6 +150,7 @@ Insert and/or update record(s) in a table. In this single API call, inserts and 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new Rossity\PhpQuickbase\Api\RecordsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -157,7 +159,7 @@ $apiInstance = new Rossity\PhpQuickbase\Api\RecordsApi(
 $qBRealmHostname = 'qBRealmHostname_example'; // string | Your Quick Base domain, for example demo.quickbase.com
 $authorization = 'authorization_example'; // string | The Quick Base authentication scheme you are using to authenticate the request, as described on the [authorization page](../auth).
 $userAgent = 'userAgent_example'; // string | This is entered by the person or utility invoking the API. You might custom create this or use the default one of your toolkit. Being descriptive here may offer more identification and troubleshooting capabilities.
-$generated = new \Rossity\PhpQuickbase\Model\InlineObject11(); // \Rossity\PhpQuickbase\Model\InlineObject11 | 
+$generated = new \Rossity\PhpQuickbase\Model\InlineObject11(); // \Rossity\PhpQuickbase\Model\InlineObject11
 
 try {
     $result = $apiInstance->upsert($qBRealmHostname, $authorization, $userAgent, $generated);
@@ -165,11 +167,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling RecordsApi->upsert: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -189,9 +189,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

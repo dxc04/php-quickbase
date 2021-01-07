@@ -1,0 +1,10 @@
+gitUserId: rossity
+gitRepoId: php-quickbase
+additionalProperties:
+  apiPackage: Api
+  invokerPackage: Rossity\PhpQuickbase
+  modelPackage: Model
+  packageName: Rossity/PhpQuickbase
+  variableNamingConvention: camelCase
+  legacyDiscriminatoryBehavior: false
+  srcBasePath: src

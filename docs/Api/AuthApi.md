@@ -1,16 +1,17 @@
 # Rossity\PhpQuickbase\AuthApi
 
-All URIs are relative to *https://api.quickbase.com/v1*
+All URIs are relative to https://api.quickbase.com/v1.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getTempTokenDBID**](AuthApi.md#getTempTokenDBID) | **GET** /auth/temporary/{dbid} | Get a temporary token for a dbid
+[**getTempTokenDBID()**](AuthApi.md#getTempTokenDBID) | **GET** /auth/temporary/{dbid} | Get a temporary token for a dbid
 
 
+## `getTempTokenDBID()`
 
-## getTempTokenDBID
-
-> map[string,object] getTempTokenDBID($dbid, $qBRealmHostname, $userAgent, $qBAppToken)
+```php
+getTempTokenDBID($dbid, $qBRealmHostname, $userAgent, $qBAppToken): map[string,object]
+```
 
 Get a temporary token for a dbid
 
@@ -21,6 +22,7 @@ Use this endpoint to get a temporary authorization token, scoped to either an ap
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Rossity\PhpQuickbase\Api\AuthApi(
@@ -39,11 +41,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AuthApi->getTempTokenDBID: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -63,9 +63,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

@@ -1,18 +1,19 @@
 # Rossity\PhpQuickbase\ReportsApi
 
-All URIs are relative to *https://api.quickbase.com/v1*
+All URIs are relative to https://api.quickbase.com/v1.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getReport**](ReportsApi.md#getReport) | **GET** /reports/{reportId} | Get a report
-[**getTableReports**](ReportsApi.md#getTableReports) | **GET** /reports | Get reports for a table
-[**runReport**](ReportsApi.md#runReport) | **POST** /reports/{reportId}/run | Run a report
+[**getReport()**](ReportsApi.md#getReport) | **GET** /reports/{reportId} | Get a report
+[**getTableReports()**](ReportsApi.md#getTableReports) | **GET** /reports | Get reports for a table
+[**runReport()**](ReportsApi.md#runReport) | **POST** /reports/{reportId}/run | Run a report
 
 
+## `getReport()`
 
-## getReport
-
-> map[string,object] getReport($reportId, $tableId, $qBRealmHostname, $authorization, $userAgent)
+```php
+getReport($reportId, $tableId, $qBRealmHostname, $authorization, $userAgent): map[string,object]
+```
 
 Get a report
 
@@ -23,6 +24,7 @@ Get the schema (properties) of an individual report.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Rossity\PhpQuickbase\Api\ReportsApi(
@@ -42,11 +44,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ReportsApi->getReport: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -67,16 +67,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getTableReports()`
 
-## getTableReports
-
-> \Rossity\PhpQuickbase\Model\InlineResponse2001[] getTableReports($tableId, $qBRealmHostname, $authorization, $userAgent)
+```php
+getTableReports($tableId, $qBRealmHostname, $authorization, $userAgent): \Rossity\PhpQuickbase\Model\InlineResponse2002[]
+```
 
 Get reports for a table
 
@@ -87,6 +88,7 @@ Get the schema (properties) of all reports for a table. If the user running the 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Rossity\PhpQuickbase\Api\ReportsApi(
@@ -105,11 +107,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ReportsApi->getTableReports: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Rossity\PhpQuickbase\Model\InlineResponse2001[]**](../Model/InlineResponse2001.md)
+[**\Rossity\PhpQuickbase\Model\InlineResponse2002[]**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -129,16 +129,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `runReport()`
 
-## runReport
-
-> map[string,object] runReport($reportId, $tableId, $qBRealmHostname, $authorization, $skip, $top, $userAgent, $generated)
+```php
+runReport($reportId, $tableId, $qBRealmHostname, $authorization, $skip, $top, $userAgent, $generated): map[string,object]
+```
 
 Run a report
 
@@ -149,6 +150,7 @@ Runs a report, based on an ID and returns the underlying data associated with it
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Rossity\PhpQuickbase\Api\ReportsApi(
@@ -163,7 +165,7 @@ $authorization = 'authorization_example'; // string | The Quick Base authenticat
 $skip = 56; // int | The number of records to skip. You can set this value when paginating through a set of results.
 $top = 56; // int | The maximum number of records to return. You can override the default Quick Base pagination to get more or fewer results. If your requested value here exceeds the dynamic maximums, we will return a subset of results and the rest can be gathered in subsequent API calls.
 $userAgent = 'userAgent_example'; // string | This is entered by the person or utility invoking the API. You might custom create this or use the default one of your toolkit. Being descriptive here may offer more identification and troubleshooting capabilities.
-$generated = new \stdClass; // object | 
+$generated = new \stdClass; // object
 
 try {
     $result = $apiInstance->runReport($reportId, $tableId, $qBRealmHostname, $authorization, $skip, $top, $userAgent, $generated);
@@ -171,11 +173,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ReportsApi->runReport: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -199,9 +199,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

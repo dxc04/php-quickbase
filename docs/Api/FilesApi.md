@@ -1,17 +1,18 @@
 # Rossity\PhpQuickbase\FilesApi
 
-All URIs are relative to *https://api.quickbase.com/v1*
+All URIs are relative to https://api.quickbase.com/v1.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteFile**](FilesApi.md#deleteFile) | **DELETE** /files/{tableId}/{recordId}/{fieldId}/{versionNumber} | Delete file
-[**downloadFile**](FilesApi.md#downloadFile) | **GET** /files/{tableId}/{recordId}/{fieldId}/{versionNumber} | Download file
+[**deleteFile()**](FilesApi.md#deleteFile) | **DELETE** /files/{tableId}/{recordId}/{fieldId}/{versionNumber} | Delete file
+[**downloadFile()**](FilesApi.md#downloadFile) | **GET** /files/{tableId}/{recordId}/{fieldId}/{versionNumber} | Download file
 
 
+## `deleteFile()`
 
-## deleteFile
-
-> map[string,object] deleteFile($tableId, $recordId, $fieldId, $versionNumber, $qBRealmHostname, $authorization, $userAgent)
+```php
+deleteFile($tableId, $recordId, $fieldId, $versionNumber, $qBRealmHostname, $authorization, $userAgent): map[string,object]
+```
 
 Delete file
 
@@ -22,6 +23,7 @@ Deletes one file attachment version. Meta-data about files can be retrieved from
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Rossity\PhpQuickbase\Api\FilesApi(
@@ -43,11 +45,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling FilesApi->deleteFile: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -70,16 +70,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `downloadFile()`
 
-## downloadFile
-
-> object downloadFile($tableId, $recordId, $fieldId, $versionNumber, $qBRealmHostname, $authorization, $userAgent)
+```php
+downloadFile($tableId, $recordId, $fieldId, $versionNumber, $qBRealmHostname, $authorization, $userAgent): object
+```
 
 Download file
 
@@ -90,6 +91,7 @@ Downloads the file attachment, with the file attachment content encoded in base6
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Rossity\PhpQuickbase\Api\FilesApi(
@@ -111,11 +113,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling FilesApi->downloadFile: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -138,9 +138,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

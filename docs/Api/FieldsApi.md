@@ -1,22 +1,23 @@
 # Rossity\PhpQuickbase\FieldsApi
 
-All URIs are relative to *https://api.quickbase.com/v1*
+All URIs are relative to https://api.quickbase.com/v1.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createField**](FieldsApi.md#createField) | **POST** /fields | Create a field
-[**deleteFields**](FieldsApi.md#deleteFields) | **DELETE** /fields | Delete field(s)
-[**getField**](FieldsApi.md#getField) | **GET** /fields/{fieldId} | Get field
-[**getFieldUsage**](FieldsApi.md#getFieldUsage) | **GET** /fields/usage/{fieldId} | Get usage for a field
-[**getFields**](FieldsApi.md#getFields) | **GET** /fields | Get fields for a table
-[**getFieldsUsage**](FieldsApi.md#getFieldsUsage) | **GET** /fields/usage | Get usage for all fields
-[**updateField**](FieldsApi.md#updateField) | **POST** /fields/{fieldId} | Update a field
+[**createField()**](FieldsApi.md#createField) | **POST** /fields | Create a field
+[**deleteFields()**](FieldsApi.md#deleteFields) | **DELETE** /fields | Delete field(s)
+[**getField()**](FieldsApi.md#getField) | **GET** /fields/{fieldId} | Get field
+[**getFieldUsage()**](FieldsApi.md#getFieldUsage) | **GET** /fields/usage/{fieldId} | Get usage for a field
+[**getFields()**](FieldsApi.md#getFields) | **GET** /fields | Get fields for a table
+[**getFieldsUsage()**](FieldsApi.md#getFieldsUsage) | **GET** /fields/usage | Get usage for all fields
+[**updateField()**](FieldsApi.md#updateField) | **POST** /fields/{fieldId} | Update a field
 
 
+## `createField()`
 
-## createField
-
-> map[string,object] createField($tableId, $qBRealmHostname, $authorization, $userAgent, $generated)
+```php
+createField($tableId, $qBRealmHostname, $authorization, $userAgent, $generated): map[string,object]
+```
 
 Create a field
 
@@ -29,6 +30,7 @@ Creates a field within a table, including the custom permissions of that field.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new Rossity\PhpQuickbase\Api\FieldsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -38,7 +40,7 @@ $tableId = 'tableId_example'; // string | The unique identifier of the table.
 $qBRealmHostname = 'qBRealmHostname_example'; // string | Your Quick Base domain, for example demo.quickbase.com
 $authorization = 'authorization_example'; // string | The Quick Base authentication scheme you are using to authenticate the request, as described on the [authorization page](../auth).
 $userAgent = 'userAgent_example'; // string | This is entered by the person or utility invoking the API. You might custom create this or use the default one of your toolkit. Being descriptive here may offer more identification and troubleshooting capabilities.
-$generated = new \Rossity\PhpQuickbase\Model\InlineObject8(); // \Rossity\PhpQuickbase\Model\InlineObject8 | 
+$generated = new \Rossity\PhpQuickbase\Model\InlineObject8(); // \Rossity\PhpQuickbase\Model\InlineObject8
 
 try {
     $result = $apiInstance->createField($tableId, $qBRealmHostname, $authorization, $userAgent, $generated);
@@ -46,11 +48,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling FieldsApi->createField: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -71,16 +71,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteFields()`
 
-## deleteFields
-
-> map[string,object] deleteFields($tableId, $qBRealmHostname, $authorization, $userAgent, $generated)
+```php
+deleteFields($tableId, $qBRealmHostname, $authorization, $userAgent, $generated): map[string,object]
+```
 
 Delete field(s)
 
@@ -93,6 +94,7 @@ Deletes one or many fields in a table, based on field id. This will also permane
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new Rossity\PhpQuickbase\Api\FieldsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -102,7 +104,7 @@ $tableId = 'tableId_example'; // string | The unique identifier of the table.
 $qBRealmHostname = 'qBRealmHostname_example'; // string | Your Quick Base domain, for example demo.quickbase.com
 $authorization = 'authorization_example'; // string | The Quick Base authentication scheme you are using to authenticate the request, as described on the [authorization page](../auth).
 $userAgent = 'userAgent_example'; // string | This is entered by the person or utility invoking the API. You might custom create this or use the default one of your toolkit. Being descriptive here may offer more identification and troubleshooting capabilities.
-$generated = new \Rossity\PhpQuickbase\Model\InlineObject9(); // \Rossity\PhpQuickbase\Model\InlineObject9 | 
+$generated = new \Rossity\PhpQuickbase\Model\InlineObject9(); // \Rossity\PhpQuickbase\Model\InlineObject9
 
 try {
     $result = $apiInstance->deleteFields($tableId, $qBRealmHostname, $authorization, $userAgent, $generated);
@@ -110,11 +112,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling FieldsApi->deleteFields: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -135,16 +135,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getField()`
 
-## getField
-
-> map[string,object] getField($fieldId, $tableId, $qBRealmHostname, $authorization, $includeFieldPerms, $userAgent)
+```php
+getField($fieldId, $tableId, $qBRealmHostname, $authorization, $includeFieldPerms, $userAgent): map[string,object]
+```
 
 Get field
 
@@ -155,6 +156,7 @@ Gets the properties of an individual field, based on field id.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Rossity\PhpQuickbase\Api\FieldsApi(
@@ -175,11 +177,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling FieldsApi->getField: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -201,16 +201,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getFieldUsage()`
 
-## getFieldUsage
-
-> \Rossity\PhpQuickbase\Model\InlineResponse2003[] getFieldUsage($fieldId, $tableId, $qBRealmHostname, $authorization, $userAgent)
+```php
+getFieldUsage($fieldId, $tableId, $qBRealmHostname, $authorization, $userAgent): \Rossity\PhpQuickbase\Model\InlineResponse2004[]
+```
 
 Get usage for a field
 
@@ -221,6 +222,7 @@ Get a single fields usage statistics. This is a summary of the information that 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Rossity\PhpQuickbase\Api\FieldsApi(
@@ -240,11 +242,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling FieldsApi->getFieldUsage: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Rossity\PhpQuickbase\Model\InlineResponse2003[]**](../Model/InlineResponse2003.md)
+[**\Rossity\PhpQuickbase\Model\InlineResponse2004[]**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -265,16 +265,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getFields()`
 
-## getFields
-
-> \Rossity\PhpQuickbase\Model\InlineResponse2002[] getFields($tableId, $qBRealmHostname, $authorization, $includeFieldPerms, $userAgent)
+```php
+getFields($tableId, $qBRealmHostname, $authorization, $includeFieldPerms, $userAgent): \Rossity\PhpQuickbase\Model\InlineResponse2003[]
+```
 
 Get fields for a table
 
@@ -285,6 +286,7 @@ Gets the properties for all fields in a specific table. The properties for each 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Rossity\PhpQuickbase\Api\FieldsApi(
@@ -304,11 +306,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling FieldsApi->getFields: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Rossity\PhpQuickbase\Model\InlineResponse2002[]**](../Model/InlineResponse2002.md)
+[**\Rossity\PhpQuickbase\Model\InlineResponse2003[]**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -329,16 +329,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getFieldsUsage()`
 
-## getFieldsUsage
-
-> \Rossity\PhpQuickbase\Model\InlineResponse2003[] getFieldsUsage($tableId, $qBRealmHostname, $authorization, $skip, $top, $userAgent)
+```php
+getFieldsUsage($tableId, $qBRealmHostname, $authorization, $skip, $top, $userAgent): \Rossity\PhpQuickbase\Model\InlineResponse2004[]
+```
 
 Get usage for all fields
 
@@ -349,6 +350,7 @@ Get all the field usage statistics for a table. This is a summary of the informa
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 $apiInstance = new Rossity\PhpQuickbase\Api\FieldsApi(
@@ -369,11 +371,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling FieldsApi->getFieldsUsage: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Rossity\PhpQuickbase\Model\InlineResponse2003[]**](../Model/InlineResponse2003.md)
+[**\Rossity\PhpQuickbase\Model\InlineResponse2004[]**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -395,16 +395,17 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateField()`
 
-## updateField
-
-> map[string,object] updateField($fieldId, $tableId, $qBRealmHostname, $authorization, $userAgent, $generated)
+```php
+updateField($fieldId, $tableId, $qBRealmHostname, $authorization, $userAgent, $generated): map[string,object]
+```
 
 Update a field
 
@@ -417,6 +418,7 @@ Updates the properties and custom permissions of a field. The attempt to update 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 $apiInstance = new Rossity\PhpQuickbase\Api\FieldsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -427,7 +429,7 @@ $tableId = 'tableId_example'; // string | The unique identifier of the table.
 $qBRealmHostname = 'qBRealmHostname_example'; // string | Your Quick Base domain, for example demo.quickbase.com
 $authorization = 'authorization_example'; // string | The Quick Base authentication scheme you are using to authenticate the request, as described on the [authorization page](../auth).
 $userAgent = 'userAgent_example'; // string | This is entered by the person or utility invoking the API. You might custom create this or use the default one of your toolkit. Being descriptive here may offer more identification and troubleshooting capabilities.
-$generated = new \Rossity\PhpQuickbase\Model\InlineObject10(); // \Rossity\PhpQuickbase\Model\InlineObject10 | 
+$generated = new \Rossity\PhpQuickbase\Model\InlineObject10(); // \Rossity\PhpQuickbase\Model\InlineObject10
 
 try {
     $result = $apiInstance->updateField($fieldId, $tableId, $qBRealmHostname, $authorization, $userAgent, $generated);
@@ -435,11 +437,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling FieldsApi->updateField: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -461,9 +461,8 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-
