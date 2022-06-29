@@ -1,5 +1,5 @@
 {
-    "name": "rossity/php-quickbase",
+    "name": "dxc04/php-quickbase",
     "description": "A Quick Base RESTful API implementation of their OpenAPI spec.",
     "keywords": [
         "rossity",
@@ -38,5 +38,6 @@
     },
     "autoload-dev": {
         "psr-4": { "Rossity\\PhpQuickbase\\Test\\" : "test/" }
-    }
+    },
+    "minimum-stability": "dev"
 }
